@@ -1,0 +1,131 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Market",
+            "name": "category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "NSR Value",
+            "name": "measure_1",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "BP Value",
+            "name": "measure_2",
+            "kind": "Measure"
+        }, {
+            "displayName": "MTD",
+            "name": "measure_3",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "MTD_Change",
+            "name": "measure_4",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "YTD",
+            "name": "measure_5",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "YTD Change",
+            "name": "measure_6",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+        "Arc": {
+            "displayName": "Custom Style",
+            "properties": {
+             
+                "first_bar": {
+                    "displayName": "postive bar color",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "seconed_bar": {
+                    "displayName": "negative bar color",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "Heading": {
+                    "displayName": "Heading",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "numeric":true
+                    
+                    }
+                },
+                "Values": {
+                    "displayName": "values",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "numeric":true
+                    
+                    }
+                }
+               
+           
+    
+            }
+        }
+    
+        },
+
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "measure_1"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "measure_2"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "measure_3"
+                            }
+                        } ,{
+                            "bind": {
+                                "to": "measure_4"
+                            }
+                        }, {
+                            "bind": {
+                                "to": "measure_5"
+                            }
+                        }, {
+                            "bind": {
+                                "to": "measure_6"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
